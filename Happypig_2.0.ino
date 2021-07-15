@@ -65,11 +65,11 @@ void loop(void) {
   if ( millis() - last_time > period) //ดีเลย์แบบไม่บล็อคการทำงานของ Loop 
   {
     last_time = millis();
-    if (temperature >= 32) // ถ้าอุนหภูมิ มากกว่า 32 รดน้ำ 2 วิ
+    if (Ambient_Temp >= 32) // ถ้าอุนหภูมิ มากกว่า 32 รดน้ำ 2 วิ
     {
       digitalWrite(Relay, LOW); // เปิดน้ำ    
       delay(2000);
-    } else if (moisture_percentage >= 62 or temperature <= 30) //ถ้าน้ำชื้นมากกว่า 62 หรือ อุนหภูมิ น้อยกว่า 30
+    } else if (Ambient_Temp <= 30) //ถ้าน้ำชื้นมากกว่า 62 หรือ อุนหภูมิ น้อยกว่า 30
     {
       digitalWrite(Relay, HIGH); // ปิดน้ำ
       delay(2000);
