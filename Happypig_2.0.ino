@@ -37,6 +37,13 @@ void loop(void) {
   Object_forcon = mlx.readObjectTempC();
   dtostrf(Object_forcon, 2, 2, Object_Temp);
   dtostrf(Ambient_forcon, 2, 2, Ambient_Temp);
+  /* Serial Print */
+  Serial.print("AmbientTemp:");
+  Serial.print(Ambient_Temp);
+  Serial.println("C");
+  Serial.print("ObjectTemp");
+  Serial.print(Object_Temp);
+  Serial.println("C");
   /* Set font */
   u8x8.setFont(u8x8_font_chroma48medium8_r); //Font
   /* Name project */
